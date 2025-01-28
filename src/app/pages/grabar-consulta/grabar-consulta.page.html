@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/panel-control']">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+        Regresar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Grabar Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="isMobile; else webRecorder">
+    <ion-button expand="full" (click)="openVideoRecorderModal()">
+      Abrir Grabador de Video
+    </ion-button>
+  </ng-container>
+
+  <ng-template #webRecorder>
+    <app-video-recorder-web></app-video-recorder-web>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,53 @@
+/* Espaciado y animación de los botones */
+.custom-button {
+  --background: var(--primary-color);
+  --color: var(--text-color);
+  --border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80px; /* Tamaño fijo */
+  width: 100%;  /* Usar todo el ancho disponible */
+  margin-bottom: 1rem; /* Espaciado entre botones */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación suave */
+}
+
+.custom-button:hover {
+  transform: translateY(-5px); /* Salto hacia arriba */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más visible */
+}
+
+/* Espaciado entre la cabecera de próxima cita y la imagen */
+.header-section {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Separación entre el texto y la imagen */
+}
+
+/* Ajustes de la columna de botones */
+.botones-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Espaciado entre botones */
+  padding: 1rem;
+}
+
+/* Columna de imagen */
+.imagen-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}

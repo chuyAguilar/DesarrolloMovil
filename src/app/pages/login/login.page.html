@@ -1,0 +1,36 @@
+<ion-content>
+  <!-- Contenedor principal que oscurece el fondo (azul marino) -->
+  <div class="page-background">
+    <!-- Contenedor que lleva las formas verde y amarilla -->
+    <div class="login-container">
+
+      <!-- Sección superior con la forma verde y el título "Login" -->
+      <div class="login-shape">
+        <h1>LOGIN</h1>
+      </div>
+
+      <!-- Forma amarilla para "Register" (o un botón, etc.) (click)="irARegistro()-->
+      <div class="register-shape" [routerLink]="['/registro']" >
+        REGISTER
+      </div>
+
+      <!-- Aquí va tu formulario ion-item / ion-input / botón Login -->
+      <div class="login-content">
+        <ion-item>
+          <ion-label position="stacked">Email ID</ion-label>
+          <ion-input [(ngModel)]="email" type="email" placeholder="Enter your email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Password</ion-label>
+          <ion-input [(ngModel)]="password" type="password" placeholder="Enter your password"></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" (click)="iniciarSesion()">Login</ion-button>
+        <!-- <div class="forgot-password" (click)="recuperarPassword()">
+          Forgot Password?
+        </div> -->
+      </div>
+    </div>
+  </div>
+</ion-content>

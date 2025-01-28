@@ -1,0 +1,29 @@
+<ion-content class="page-background">
+  <div class="register-container">
+    <!-- Forma superior verde con título -->
+    <div class="register-shape">
+      <h1>Register</h1>
+    </div>
+    <!-- Botón para volver a Login -->
+    <div class="login-shape" [routerLink]="['/login']">
+      Login
+    </div>
+    <!-- Contenido del formulario -->
+    <div class="register-content">
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input [(ngModel)]="email" type="email" placeholder="Enter your email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input [(ngModel)]="password" type="password" placeholder="Enter your password"></ion-input>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label position="stacked">Confirm Password</ion-label>
+        <ion-input [(ngModel)]="confirmPassword" type="password" placeholder="Confirm your password"></ion-input>
+      </ion-item> -->
+      <ion-button expand="block" (click)="registrar()">Register</ion-button>
+      <div class="back-to-login" [routerLink]="['/login']">Already have an account? Login</div>
+    </div>
+  </div>
+</ion-content>

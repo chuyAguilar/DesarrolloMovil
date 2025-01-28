@@ -1,0 +1,103 @@
+:host {
+    /* Variables de colores */
+    --primary-color: #2baf7f; /* Verde */
+    --secondary-color: #ffd64d; /* Amarillo */
+    --text-color: #ffffff; /* Blanco */
+    --background-color: #1a3b5d; /* Azul oscuro */
+  }
+  
+  /* Fondo principal de la página */
+  .page-background {
+    display: flex; /* Para usar flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Usar el 100% de la altura de la pantalla */
+    background-color: var(--background-color);
+  }
+  
+  
+  
+  /* Contenedor general que encierra las formas y el formulario */
+  .register-container {
+    position: relative;
+    width: 350px; /* Ancho fijo */
+    min-height: 450px; /* Altura mínima */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Forma verde principal */
+  .register-shape {
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 2rem 1rem 3rem 1rem;
+    clip-path: polygon(0 0, 80% 0, 70% 100%, 0 100%);
+  }
+  
+  .register-shape h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  
+  /* Forma amarilla (Login), colocada arriba a la derecha */
+  .login-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    width: 120px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  /* Contenedor de los ion-item, inputs y botón */
+  .register-content {
+    background-color: var(--background-color);
+    padding: 1.5rem 1rem;
+  }
+  
+  /* ion-item e ion-label en modo oscuro/transparente */
+  .register-content ion-item {
+    --background: transparent;
+    --border-color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  .register-content ion-label {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .register-content ion-input {
+    color: var(--text-color);
+  }
+  
+  /* Botón Register en amarillo */
+  .register-content ion-button {
+    --background: var(--secondary-color);
+    --color: var(--background-color);
+    width: 100%;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  /* Enlace para volver a login */
+  .back-to-login {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 0.8rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  

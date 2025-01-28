@@ -1,0 +1,62 @@
+<ion-content fullscreen="true" style="--background: var(--background-color); color: var(--text-color);">
+  <!-- Botón de Cerrar Sesión -->
+  <ion-header>
+    <ion-toolbar style="--background: var(--primary-color); --color: var(--text-color);">
+      <ion-buttons slot="start">
+        <ion-button (click)="cerrarSesion()">
+          <ion-icon slot="start" name="log-out"></ion-icon>
+          Cerrar Sesión
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Clínica Veterinaria</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid class="layout-grid">
+    <ion-row>
+      <!-- Columna de botones -->
+      <ion-col size="4" class="botones-col">
+        <ion-button expand="block" class="custom-button" [routerLink]="['/calendario-citas']" (mouseover)="cambiarImagen('calendario')" (mouseout)="resetImagen()">
+          <ion-icon slot="top" name="calendar"></ion-icon>
+          <span>Calendario</span>
+        </ion-button>
+        <ion-button expand="block" class="custom-button" [routerLink]="['/perfil-paciente']" (mouseover)="cambiarImagen('mascota')" (mouseout)="resetImagen()">
+          <ion-icon slot="top" name="paw"></ion-icon>
+          <span>Tu Mascota</span>
+        </ion-button>
+        <ion-button expand="block" class="custom-button" [routerLink]="['/consultas-pasadas']" (mouseover)="cambiarImagen('consultas')" (mouseout)="resetImagen()">
+          <ion-icon slot="top" name="time"></ion-icon>
+          <span>Consultas</span>
+        </ion-button>
+        <ion-button expand="block" class="custom-button" [routerLink]="['/consultorios-cercanos']" (mouseover)="cambiarImagen('consultorios')" (mouseout)="resetImagen()">
+          <ion-icon slot="top" name="location"></ion-icon>
+          <span>Consultorios</span>
+        </ion-button>
+        <ion-button expand="block" class="custom-button" [routerLink]="['/grabar-consulta']" (mouseover)="cambiarImagen('grabar')" (mouseout)="resetImagen()">
+          <ion-icon slot="top" name="videocam"></ion-icon>
+          <span>Grabar Consulta</span>
+        </ion-button>
+        <ion-button expand="block" class="custom-button" [routerLink]="['/chat-de-pacientes']" (mouseover)="cambiarImagen('chat')" (mouseout)="resetImagen()">
+          <ion-icon slot="top" name="chatbubbles"></ion-icon>
+          <span>Chat</span>
+        </ion-button>
+      </ion-col>
+
+      <!-- Columna de imagen -->
+      <ion-col size="8" class="imagen-col">
+        <!-- Encabezado de próxima cita -->
+        <div class="header-section">
+          <h2>Próxima cita</h2>
+          <p *ngIf="citasProximas.length > 0; else sinCitas">
+            {{ citasProximas[0]?.fechaHora | date: 'medium' }}
+          </p>
+          <ng-template #sinCitas>
+            Sin consultas
+          </ng-template>
+        </div>
+        <!-- Imagen dinámica -->
+        <img [src]="imagenActual" alt="Vista previa" class="imagen-preview" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
