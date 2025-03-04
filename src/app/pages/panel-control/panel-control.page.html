@@ -36,10 +36,10 @@
           <ion-icon slot="top" name="videocam"></ion-icon>
           <span>Grabar Consulta</span>
         </ion-button>
-        <ion-button expand="block" class="custom-button" [routerLink]="['/chat-de-pacientes']" (mouseover)="cambiarImagen('chat')" (mouseout)="resetImagen()">
+        <!-- <ion-button expand="block" class="custom-button" [routerLink]="['/chat-de-pacientes']" (mouseover)="cambiarImagen('chat')" (mouseout)="resetImagen()">
           <ion-icon slot="top" name="chatbubbles"></ion-icon>
           <span>Chat</span>
-        </ion-button>
+        </ion-button> -->
       </ion-col>
 
       <!-- Columna de imagen -->
@@ -48,8 +48,9 @@
         <div class="header-section">
           <h2>Próxima cita</h2>
           <p *ngIf="citasProximas.length > 0; else sinCitas">
-            {{ citasProximas[0]?.fechaHora | date: 'medium' }}
+            {{ citasProximas[0].fechaHora | date: 'medium' }}
           </p>
+          
           <ng-template #sinCitas>
             Sin consultas
           </ng-template>

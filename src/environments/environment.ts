@@ -6,13 +6,13 @@ export const environment = {
   production: false,
   youtubeApiKey: 'AIzaSyCmshCy6XXEsW1o78WyAoKQ5BAkTq9lTQE',
   firebase: {
-    apiKey: "AIzaSyAxPCxI5GeRFSwkFYgZi9ldb0Hzc8wlGcU",
-    authDomain: "consultasmedicas-807b5.firebaseapp.com",
-    databaseURL: "https://consultasmedicas-807b5-default-rtdb.firebaseio.com",
-    projectId: "consultasmedicas-807b5",
-    storageBucket: "consultasmedicas-807b5.appspot.com",
-    messagingSenderId: "666909562096",
-    appId: "1:666909562096:web:923c5af177dc2ca54cde35",
+    apiKey: "AIzaSyCpbOqI9Au0uPGDVIbwiC6FFHG0M2YradI",
+  authDomain: "veterinaria-2a2aa.firebaseapp.com",
+  databaseURL: "https://veterinaria-2a2aa-default-rtdb.firebaseio.com",
+  projectId: "veterinaria-2a2aa",
+  storageBucket: "veterinaria-2a2aa.firebasestorage.app",
+  messagingSenderId: "217111886424",
+  appId: "1:217111886424:web:d1d2dd717a1cfcbd3fa82d",
     measurementId: "G-EXMZB5W2T2"
   }
 };
